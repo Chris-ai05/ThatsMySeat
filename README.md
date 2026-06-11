@@ -1,6 +1,6 @@
 # 🪑 Wer sitzt wo? – Das Sitzplatz-Rätsel
 
-Ein Logik-Rätselspiel für den Browser: In jedem Level siehst du einen Schauplatz mit Sitzplätzen – Omas Esstisch, einen Kinosaal, eine Hochzeitstafel, eine Orchesterprobe und eine große Geburtstagsfeier. Einige Personen sitzen schon. Die übrigen warten am Rand. Lies die Hinweise, kombiniere – und zieh jede Person auf ihren richtigen Stuhl.
+Ein Logik-Rätselspiel für den Browser: In jedem Level siehst du einen Schauplatz mit Sitzplätzen – von Omas Esstisch über Kinosaal, Hochzeitstafel, Orchesterprobe und Geburtstagsfeier bis zu Reisebus, Raumstation, Krimi-Dinner, Riesenrad und dem Speisewagen eines Nachtzugs. Einige Personen sitzen schon. Die übrigen warten am Rand. Lies die Hinweise, kombiniere – und zieh jede Person auf ihren richtigen Stuhl.
 
 **Regeln**
 
@@ -10,7 +10,7 @@ Ein Logik-Rätselspiel für den Browser: In jedem Level siehst du einen Schaupla
 - Du hast **2 Leben pro Level**. Beim zweiten Fehler startet das Level neu.
 - Die Level schalten sich nacheinander frei. Dein Fortschritt wird per `localStorage` im Browser gespeichert.
 
-Alle 5 Level sind handgeprüft **eindeutig lösbar**: Es gibt immer eine Reihenfolge, in der sich jeder Platz rein logisch aus den Hinweisen ergibt – ganz ohne Raten.
+Alle 10 Level sind **eindeutig lösbar** – maschinell verifiziert per Constraint-Solver: Es gibt immer eine Reihenfolge, in der sich jeder Platz rein logisch aus den Hinweisen ergibt, ganz ohne Raten. Die Schwierigkeit steigt von Level zu Level; Level 10 ist die Meisterprüfung.
 
 ## Projektstruktur
 
@@ -49,7 +49,7 @@ Neue Level werden einfach ans `LEVELS`-Array in `js/levels.js` angehängt. Ein L
 | Feld | Bedeutung |
 | --- | --- |
 | `id`, `title`, `menuIcon`, `difficulty` | Anzeige auf der Levelkarte |
-| `scene` | Hintergrund-Stil: `l1`–`l5` (oder eigenen in `style.css` ergänzen) |
+| `scene` | Hintergrund-Stil: `l1`–`l10` (oder eigenen in `style.css` ergänzen) |
 | `seatScale` | Stuhlgröße relativ zur Standardgröße (kleiner bei vielen Plätzen) |
 | `intro` | Einleitungstext über den Hinweisen |
 | `decor` | Deko: `ellipse`, `rect`, `screen`, `banner`, `podium`, `emoji` |

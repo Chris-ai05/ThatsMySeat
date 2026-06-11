@@ -191,6 +191,7 @@
         n.style.fontSize = (d.size || 24) + "px";
     }
     n.setAttribute("aria-hidden", "true");
+    if (d.cls) n.classList.add(d.cls);
     return n;
   }
   function sizeBox(n, d) {

@@ -382,6 +382,106 @@ button { font: inherit; color: inherit; }
   --chairEdge: #b9b19d;
   --table: #fffdf6;
 }
+/* L6 – Reisebus von oben: Asphalt außen, warmer Businnenraum */
+.scene--l6 {
+  background:
+    repeating-linear-gradient(0deg, transparent 0 46px, rgba(255, 255, 255, 0.22) 46px 54px) 50% 50% / 12px 100% no-repeat,
+    linear-gradient(#5a6068 0%, #4a505a 100%);
+  border-color: rgba(255, 255, 255, 0.14);
+  --table: #e7ddc9;
+  --chair: #3f6aa8;
+  --chairEdge: #2a4a7c;
+  --plateBg: #f6f1e4;
+}
+.scene--l6 .scene-label { border-color: rgba(255, 255, 255, 0.2); }
+/* L7 – Raumstation: tiefes All mit Sternen, glühender Kern */
+.scene--l7 {
+  background:
+    radial-gradient(2px 2px at 12% 22%, #ffffffd9 50%, transparent 51%),
+    radial-gradient(2px 2px at 33% 9%, #ffffffb3 50%, transparent 51%),
+    radial-gradient(2.5px 2.5px at 67% 14%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(2px 2px at 88% 34%, #ffffffb3 50%, transparent 51%),
+    radial-gradient(2px 2px at 79% 78%, #ffffffcc 50%, transparent 51%),
+    radial-gradient(2.5px 2.5px at 23% 84%, #ffffffd9 50%, transparent 51%),
+    radial-gradient(2px 2px at 51% 64%, #ffffff99 50%, transparent 51%),
+    radial-gradient(2px 2px at 8% 56%, #ffffffbf 50%, transparent 51%),
+    radial-gradient(130% 110% at 50% 115%, #2a2150 0%, #171233 46%, #0b081f 100%);
+  border-color: rgba(255, 255, 255, 0.12);
+  --table: #3c2e6e;
+  --chair: #c8cfdb;
+  --chairEdge: #8d97a8;
+  --plateBg: #f2f0fa;
+}
+.scene--l7 .scene-label { border-color: rgba(255, 255, 255, 0.2); }
+.scene--l7 .d-ellipse {
+  border-color: rgba(170, 150, 255, 0.5);
+  box-shadow: 0 0 26px rgba(140, 110, 255, 0.55), var(--shadow-md);
+}
+/* L8 – Burgsaal: Kerzenschein in dunklem Gemäuer */
+.scene--l8 {
+  background:
+    radial-gradient(90% 70% at 50% 46%, rgba(255, 187, 92, 0.18), transparent 70%),
+    radial-gradient(140% 120% at 50% 0%, #4a2b25 0%, #35201c 52%, #221311 100%);
+  border-color: rgba(224, 169, 31, 0.28);
+  --table: #efe2c8;
+  --chair: #5c3a2e;
+  --chairEdge: #3c241c;
+  --plateBg: #f7ecd6;
+}
+.scene--l8 .scene-label { border-color: rgba(224, 169, 31, 0.4); }
+.scene--l8 .seat .chair { box-shadow: inset 0 0 0 2px rgba(224, 169, 31, 0.35), var(--shadow-md); }
+/* L9 – Riesenrad: Nachthimmel; Ellipse wird zum Radkranz, Rects zu Gondelkörben */
+.scene--l9 {
+  background:
+    radial-gradient(2px 2px at 16% 18%, #ffffffcc 50%, transparent 51%),
+    radial-gradient(2px 2px at 40% 8%, #ffffff99 50%, transparent 51%),
+    radial-gradient(2.5px 2.5px at 72% 12%, #ffffffd9 50%, transparent 51%),
+    radial-gradient(2px 2px at 90% 26%, #ffffffa6 50%, transparent 51%),
+    radial-gradient(2px 2px at 7% 42%, #ffffff99 50%, transparent 51%),
+    radial-gradient(140% 120% at 50% 110%, #3b2d63 0%, #221b49 46%, #110d2c 100%);
+  border-color: rgba(255, 255, 255, 0.14);
+  --table: #f3c64b;
+  --chair: #7a2733;
+  --chairEdge: #511720;
+  --plateBg: #fdf4e0;
+}
+.scene--l9 .scene-label { border-color: rgba(255, 255, 255, 0.2); }
+.scene--l9 .d-ellipse {
+  background: transparent;
+  border: 6px solid rgba(255, 224, 138, 0.55);
+  box-shadow: 0 0 22px rgba(243, 198, 75, 0.4), inset 0 0 22px rgba(243, 198, 75, 0.25);
+}
+.scene--l9 .d-rect {
+  border-radius: 10px 10px 14px 14px;
+  background: linear-gradient(rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0)), #8a3140;
+  border-color: rgba(255, 224, 138, 0.5);
+}
+/* L10 – Speisewagen: Nacht draußen, warmes Wagen-Inneres */
+.scene--l10 {
+  background:
+    radial-gradient(2px 2px at 10% 20%, #ffffffb3 50%, transparent 51%),
+    radial-gradient(2px 2px at 90% 14%, #ffffff99 50%, transparent 51%),
+    linear-gradient(#1c2742 0%, #141d33 100%);
+  border-color: rgba(255, 255, 255, 0.14);
+  --table: #f4ead4;
+  --chair: #7c2f3a;
+  --chairEdge: #541f28;
+  --plateBg: #fbf4e4;
+}
+.scene--l10 .scene-label { border-color: rgba(255, 255, 255, 0.2); }
+/* Wagenkasten und Tische über explizite Klassen unterscheiden */
+.scene--l10 .d-rect.tisch {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.25)), #fffdf6;
+  border-color: rgba(124, 47, 58, 0.35);
+  border-radius: 12px;
+}
+.scene--l10 .d-rect.wagen {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)),
+    var(--table);
+  border-color: rgba(39, 50, 58, 0.18);
+  border-radius: 22px;
+}
 
 /* ---------- Deko ---------- */
 .d-ellipse, .d-rect, .d-screen, .d-banner, .d-podium, .d-emoji {
