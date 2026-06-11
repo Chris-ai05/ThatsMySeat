@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wer sitzt wo? – Das Sitzplatz-Rätsel</title>
+  <meta name="description" content="Ein Logik-Rätselspiel: Lies die Hinweise und bring alle Gäste an den richtigen Platz – von Omas Esstisch bis zur großen Geburtstagstafel." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪑</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- ========================= STARTSEITE ========================= -->
+    <main id="screen-menu">
+      <header class="menu-hero">
+        <div class="badge" aria-hidden="true">🪑</div>
+        <p class="eyebrow">Das Sitzplatz-Rätsel</p>
+        <h1>Wer sitzt wo<span class="q">?</span></h1>
+        <p class="tagline">Bring alle Gäste an den richtigen Platz – Hinweis für Hinweis. Aber Vorsicht: Wer zweimal danebensetzt, fängt von vorn an.</p>
+      </header>
+
+      <section aria-label="Level-Auswahl">
+        <div id="level-grid"></div>
+      </section>
+
+      <section class="howto" aria-label="Spielregeln">
+        <h2>So funktioniert’s</h2>
+        <ul>
+          <li><span class="ico" aria-hidden="true">🖐️</span><span><b>Ziehen oder Tippen:</b> Zieh eine Person auf ihren Stuhl – oder tippe erst die Person, dann den Platz.</span></li>
+          <li><span class="ico" aria-hidden="true">🔎</span><span><b>Hinweise lesen:</b> Unter der Szene steht zu jeder Person ein Hinweis. Kombiniere sie geschickt!</span></li>
+          <li><span class="ico" aria-hidden="true">❤️</span><span><b>Zwei Leben:</b> Jeder falsche Stuhl kostet ein Leben. Beim zweiten Fehler startet das Level neu.</span></li>
+          <li><span class="ico" aria-hidden="true">🔓</span><span><b>Level freischalten:</b> Löse ein Level, um das nächste zu öffnen.</span></li>
+        </ul>
+      </section>
+
+      <footer class="menu-foot">
+        <span>Tipp: Dein Fortschritt wird nur in diesem Browser gespeichert.</span>
+        <button id="btn-reset" class="btn btn-ghost" type="button">Fortschritt zurücksetzen</button>
+      </footer>
+    </main>
+
+    <!-- ========================= SPIELANSICHT ========================= -->
+    <main id="screen-game" hidden>
+      <div class="topbar">
+        <button id="btn-back" class="btn" type="button">← Übersicht</button>
+        <div class="hud">
+          <span id="hud-level"></span>
+          <span id="hud-title"></span>
+        </div>
+        <div id="hud-lives" aria-live="polite"></div>
+        <button id="btn-restart" class="btn" type="button">↻ Neu starten</button>
+      </div>
+
+      <div class="game-layout">
+        <div id="scene" class="scene" aria-label="Schauplatz mit Sitzplätzen"></div>
+
+        <aside class="bench" aria-label="Personen ohne Platz">
+          <div class="bench-head">
+            <h2>Noch ohne Platz</h2>
+            <span id="bench-count" aria-label="Anzahl wartender Personen">0</span>
+          </div>
+          <div id="bench-cards"></div>
+          <p id="bench-empty" hidden>Alle sitzen! 🎉</p>
+        </aside>
+
+        <section class="hints" aria-label="Hinweise">
+          <h2>Hinweise</h2>
+          <p id="hint-intro"></p>
+          <ul id="hint-list"></ul>
+        </section>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Overlay für Sieg / Niederlage -->
+  <div id="overlay" class="overlay" hidden>
+    <div class="panel" role="dialog" aria-modal="true" aria-labelledby="ov-title">
+      <h2 id="ov-title"></h2>
+      <p id="ov-text"></p>
+      <div id="ov-buttons"></div>
+    </div>
+  </div>
+
+  <!-- Kurzmeldungen -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <p style="text-align:center; padding: 20px; font-family: sans-serif;">
+      Dieses Spiel benötigt JavaScript. Bitte aktiviere JavaScript in deinem Browser.
+    </p>
+  </noscript>
+
+  <script src="js/levels.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
