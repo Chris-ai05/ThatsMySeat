@@ -1,6 +1,6 @@
 # 🪑 Wer sitzt wo? – Das Sitzplatz-Rätsel
 
-Ein Logik-Rätselspiel für den Browser: In jedem Level siehst du einen Schauplatz mit Sitzplätzen – von Omas Esstisch über Kinosaal, Hochzeitstafel, Orchesterprobe und Geburtstagsfeier bis zu Reisebus, Raumstation, Krimi-Dinner, Riesenrad und dem Speisewagen eines Nachtzugs. Einige Personen sitzen schon. Die übrigen warten am Rand. Lies die Hinweise, kombiniere – und zieh jede Person auf ihren richtigen Stuhl.
+Ein Logik-Rätselspiel für den Browser: In jedem Level siehst du einen Schauplatz mit Sitzplätzen – von Omas Esstisch über Kinosaal, Hochzeitstafel, Orchesterprobe und Geburtstagsfeier bis zu Reisebus, Raumstation, Krimi-Dinner, Riesenrad und dem Speisewagen eines Nachtzugs. Einige Personen sitzen schon. Die übrigen warten am Rand. Lies die Hinweise, kombiniere – und zieh jede Person auf ihren richtigen Stuhl
 
 **Regeln**
 
